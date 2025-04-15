@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body id="body"> 
+
+
+    SIGNUP PAGE:
+    <br><br>
+    <div id="div1" >
+        <label for="name" style="margin-left: 30px;">NAME:</label><input type="text" id="nam">
+        <br><br><br>
+        <button onclick="page2()" id="btn1">SIGNUP</button>
+    </div>
+</body>
+<script>
+    var nam=document.getElementById('nam');
+    let na=["rajesh",'pandi','killer'];
+    function page2(){
+        if(na.includes(nam.value))
+        window.location.href='/pages/page1.html';
+    }
+   
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body id="body">
+<span onclick="scrolldown()" id="span1"><img src="/image/bar.png" width="40px" height="40px"></span>   
+<span onclick="scrollup()" id="span2" style="display: none; "><img src="/image/wrong.png" width="40px" height="40px"></span>
+<div id="left">
+     <div id="container">
+        <button id="btn1">
+            HOME
+        </button>
+        <br>
+        <button id="btn1">
+            <img src="/image/youtube.png" width="40px" height="40px">
+            <br>
+            YOUTUBE
+        </button>
+        <br>
+        <button id="btn1">
+            <img src="/image/whatsapp.png" width="40px" height="40px">
+            <br>WHATSAPP
+        </button>
+        <br>
+        <button id="btn1">
+            INSTAGRAM
+        </button>
+        <br>
+        <button id="btn1">
+            ABOUT
+        </button>
+       <br>
+       <button id="btn1" onclick="dropdown()">
+           CONTACT
+           
+       </button>
+       <span id="span3" style="display: none;">Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Saepe libero ullam magni rerum ea, quae velit consequuntur ratione, 
+   .</span>
+    </div>
+</div>
+
+<br><br><hr><br><br><br><br>
+<div id="div2">
+    <div>
+
+    </div>
+</div>
+</body>
+<script>
+    var left=document.getElementById('left');
+    var span1=document.getElementById('span1');
+    var span2=document.getElementById('span2');
+    var nav=document.getElementById('nav');
+    function scrolldown(){
+        left.style.top='50px';
+        span2.style.display='block';
+        span1.style.display='none';
+        left.style.position='fixed';
+        nav.style.display='none';
+    }
+    function scrollup(){
+        left.style.top='-650px';
+        span2.style.display='none';
+        span1.style.display='block';
+        left.style.position='fixed';
+        span3.style.display='none';
+        nav.style.display='block';
+        container.scrollTop=container.scrollup;
+    }nav
+    var span3=document.getElementById('span3');
+    var container=document.getElementById('container');
+    function dropdown(){
+        span3.style.display='block';
+        span3.style.height='100px';
+        container.scrollTop=container.scrollHeight;
+    }
+    function signin(){
+        window.location.href='/current/index.html';
+    }
+</script>
+</html>
